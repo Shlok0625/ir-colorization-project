@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>08 · Tech Stack — ISRO Hackathon 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0; overflow: hidden; background: #070B19; color: #FFFFFF;
+    font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
+  }
+  .slide-container {
+    background: #070B19;
+  }
+  .stack-card {
+    background: #0F152D;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  }
+  .badge {
+    background: rgba(0, 229, 255, 0.08);
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    color: #00E5FF;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+  .badge-amber {
+    background: rgba(255, 179, 0, 0.08);
+    border: 1px solid rgba(255, 179, 0, 0.25);
+    color: #FFB300;
+  }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="08 Tech Stack" style="position:relative; width:1920px; height:1080px; overflow:hidden;">
+
+  <!-- Decorative: Subtle space-grid background -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:1080px; background-image: linear-gradient(to right, rgba(0, 229, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 229, 255, 0.02) 1px, transparent 1px); background-size: 80px 80px; z-index: 1;"></div>
+
+  <!-- Header metadata -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:60px; width:1720px; height:30px; font-family:'JetBrains Mono', monospace; font-size:14px; letter-spacing:0.2em; color:rgba(255,255,255,0.5); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span style="color:#00E5FF; font-weight:500;">TECHNOLOGY STACK</span>
+  </div>
+
+  <!-- Horizontal divider -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:100px; width:1720px; height:1px; background:linear-gradient(90deg, rgba(0,229,255,0.5) 0%, rgba(255,179,0,0.3) 50%, rgba(255,255,255,0.05) 100%); z-index: 5;"></div>
+
+  <!-- Slide Title -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:140px; width:1720px; height:60px; z-index:10;">
+    <h1 style="font-family:'Inter', sans-serif; font-weight:700; font-size:40px; margin:0; color:#FFFFFF; letter-spacing:-0.01em;">
+      Production-Grade Technology Stack
+    </h1>
+  </div>
+
+  <!-- Grouped Tech Stack Grid -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:230px; width:1720px; height:700px; z-index:10; display:grid; grid-template-columns: repeat(3, 1fr); grid-gap:25px;">
+    
+    <!-- Group 1: Data Ingestion & Geospatial -->
+    <div class="stack-card">
+      <div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; margin-bottom:10px;">STAGE 01</div>
+        <h3 style="font-family:'Inter', sans-serif; font-weight:700; font-size:24px; color:#FFFFFF; margin:0 0 15px 0; display:flex; align-items:center;">
+          <span style="color:#00E5FF; margin-right:12px;">🌍</span> Geospatial Ingestion
+        </h3>
+        <p style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); line-height:1.5; margin:0 0 20px 0;">
+          Robust retrieval and manipulation of high-dimensional multi-band GeoTIFF coordinates.
+        </p>
+      </div>
+      <div>
+        <div class="badge">Landsat 9 C2</div>
+        <div class="badge">Google Earth Engine</div>
+        <div class="badge">Rasterio</div>
+        <div class="badge">GDAL I/O</div>
+      </div>
+    </div>
+
+    <!-- Group 2: Image Super-Resolution -->
+    <div class="stack-card">
+      <div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; margin-bottom:10px;">STAGE 02</div>
+        <h3 style="font-family:'Inter', sans-serif; font-weight:700; font-size:24px; color:#FFFFFF; margin:0 0 15px 0; display:flex; align-items:center;">
+          <span style="color:#00E5FF; margin-right:12px;">⚡</span> Super-Resolution
+        </h3>
+        <p style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); line-height:1.5; margin:0 0 20px 0;">
+          Generative edge restoration and texture sharpening pipelines for thermal bands.
+        </p>
+      </div>
+      <div>
+        <div class="badge">ESRGAN</div>
+        <div class="badge">RRDB Blocks</div>
+        <div class="badge">PixelShuffle</div>
+        <div class="badge">PyTorch</div>
+      </div>
+    </div>
+
+    <!-- Group 3: Physics-Constrained Colorization -->
+    <div class="stack-card">
+      <div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; margin-bottom:10px;">STAGE 03</div>
+        <h3 style="font-family:'Inter', sans-serif; font-weight:700; font-size:24px; color:#FFFFFF; margin:0 0 15px 0; display:flex; align-items:center;">
+          <span style="color:#FFB300; margin-right:12px;">🎨</span> Colorization &amp; Constraints
+        </h3>
+        <p style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); line-height:1.5; margin:0 0 20px 0;">
+          Deep paired image translation coupled with land-cover semantic segmentation backdrops.
+        </p>
+      </div>
+      <div>
+        <div class="badge badge-amber">Pix2Pix</div>
+        <div class="badge badge-amber">U-Net + PatchGAN</div>
+        <div class="badge badge-amber">SegFormer</div>
+        <div class="badge badge-amber">CycleGAN Init</div>
+      </div>
+    </div>
+
+    <!-- Group 4: Downstream & QA Evaluation -->
+    <div class="stack-card">
+      <div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; margin-bottom:10px;">STAGE 04</div>
+        <h3 style="font-family:'Inter', sans-serif; font-weight:700; font-size:24px; color:#FFFFFF; margin:0 0 15px 0; display:flex; align-items:center;">
+          <span style="color:#00E5FF; margin-right:12px;">📊</span> Validation &amp; Quality QA
+        </h3>
+        <p style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); line-height:1.5; margin:0 0 20px 0;">
+          Downstream object detection and physical metric scoring to bound prediction hallucinations.
+        </p>
+      </div>
+      <div>
+        <div class="badge">YOLOv8</div>
+        <div class="badge">NDVI/NDWI Index</div>
+        <div class="badge">LPIPS / FID</div>
+        <div class="badge">PSNR / SSIM</div>
+      </div>
+    </div>
+
+    <!-- Group 5: Backend API -->
+    <div class="stack-card">
+      <div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; margin-bottom:10px;">STAGE 05</div>
+        <h3 style="font-family:'Inter', sans-serif; font-weight:700; font-size:24px; color:#FFFFFF; margin:0 0 15px 0; display:flex; align-items:center;">
+          <span style="color:#00E5FF; margin-right:12px;">⚙️</span> Backend Architecture
+        </h3>
+        <p style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); line-height:1.5; margin:0 0 20px 0;">
+          Lightweight REST endpoints to pipeline image rasters to model inference engines.
+        </p>
+      </div>
+      <div>
+        <div class="badge">Python</div>
+        <div class="badge">Flask API</div>
+        <div class="badge">NumPy</div>
+        <div class="badge">OpenCV</div>
+      </div>
+    </div>
+
+    <!-- Group 6: Interactive Frontend -->
+    <div class="stack-card">
+      <div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); letter-spacing:0.15em; margin-bottom:10px;">STAGE 06</div>
+        <h3 style="font-family:'Inter', sans-serif; font-weight:700; font-size:24px; color:#FFFFFF; margin:0 0 15px 0; display:flex; align-items:center;">
+          <span style="color:#00E5FF; margin-right:12px;">💻</span> Interactive Client
+        </h3>
+        <p style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); line-height:1.5; margin:0 0 20px 0;">
+          Side-by-side interactive tile visualizer displaying model metrics dynamically.
+        </p>
+      </div>
+      <div>
+        <div class="badge">HTML5 Canvas</div>
+        <div class="badge">CSS Grid/Flex</div>
+        <div class="badge">Modern JavaScript</div>
+        <div class="badge">Leaflet / OpenLayers</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom slide indicator -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:1010px; width:1720px; height:24px; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.15em; color:rgba(255,255,255,0.3); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span>08 / 09</span>
+  </div>
+
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

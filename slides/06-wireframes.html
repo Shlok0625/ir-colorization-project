@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>06 · Web Viewer Wireframe — ISRO Hackathon 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0; overflow: hidden; background: #070B19; color: #FFFFFF;
+    font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
+  }
+  .slide-container {
+    background: #070B19;
+  }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="06 Wireframes" style="position:relative; width:1920px; height:1080px; overflow:hidden;">
+
+  <!-- Decorative: Subtle space-grid background -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:1080px; background-image: linear-gradient(to right, rgba(0, 229, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 229, 255, 0.02) 1px, transparent 1px); background-size: 80px 80px; z-index: 1;"></div>
+
+  <!-- Header metadata -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:60px; width:1720px; height:30px; font-family:'JetBrains Mono', monospace; font-size:14px; letter-spacing:0.2em; color:rgba(255,255,255,0.5); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span style="color:#00E5FF; font-weight:500;">LIGHTWEIGHT DEMO WIREFRAME</span>
+  </div>
+
+  <!-- Horizontal divider -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:100px; width:1720px; height:1px; background:linear-gradient(90deg, rgba(0,229,255,0.5) 0%, rgba(255,179,0,0.3) 50%, rgba(255,255,255,0.05) 100%); z-index: 5;"></div>
+
+  <!-- Slide Title -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:130px; width:1720px; height:60px; z-index:10;">
+    <h1 style="font-family:'Inter', sans-serif; font-weight:700; font-size:40px; margin:0; color:#FFFFFF; letter-spacing:-0.01em;">
+      Model Evaluation &amp; Web Viewer UI
+    </h1>
+  </div>
+
+  <!-- Browser Mockup Window (The Wireframe) -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:210px; width:1720px; height:600px; background:#0B0F23; border:2px dashed rgba(0, 229, 255, 0.3); border-radius:12px; z-index:10; overflow:hidden; box-shadow:0 15px 35px rgba(0,0,0,0.4); box-sizing:border-box;">
+    
+    <!-- Browser Top Chrome (Tabs & Address Bar) -->
+    <div style="height:55px; background:rgba(255,255,255,0.03); border-bottom:1px dashed rgba(255,255,255,0.1); display:flex; align-items:center; padding:0 20px; justify-content:space-between; box-sizing:border-box;">
+      <div style="display:flex; align-items:center;">
+        <!-- Window dots -->
+        <span style="width:12px; height:12px; background:rgba(255,255,255,0.2); border-radius:50%; margin-right:8px;"></span>
+        <span style="width:12px; height:12px; background:rgba(255,255,255,0.2); border-radius:50%; margin-right:8px;"></span>
+        <span style="width:12px; height:12px; background:rgba(255,255,255,0.2); border-radius:50%; margin-right:25px;"></span>
+        <!-- Address Bar Mock -->
+        <div style="width:480px; height:32px; background:rgba(0,0,0,0.4); border-radius:6px; border:1px dashed rgba(255,255,255,0.1); display:flex; align-items:center; padding-left:15px; font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4);">
+          localhost:5000 / model-viewer-demo
+        </div>
+      </div>
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; border:1px solid rgba(0,229,255,0.2); padding:4px 10px; border-radius:4px;">
+        LOW-FI PROTOTYPE WIREFRAME
+      </div>
+    </div>
+
+    <!-- Browser Main Content -->
+    <div style="display:flex; height:541px; box-sizing:border-box;">
+      
+      <!-- Left Sidebar: Tile Selector & Params -->
+      <div style="width:280px; background:rgba(0,0,0,0.2); border-right:1px dashed rgba(255,255,255,0.1); padding:25px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#00E5FF; margin-bottom:8px; letter-spacing:0.1em;">SELECT INPUT DATASET</div>
+          <div style="border:1px dashed rgba(255,255,255,0.2); padding:10px; border-radius:6px; background:rgba(255,255,255,0.02); font-family:'Inter', sans-serif; font-size:14px; color:#FFFFFF; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+            <span>Landsat_9_India_Q1</span>
+            <span style="font-size:12px; color:rgba(255,255,255,0.4);">▼</span>
+          </div>
+
+          <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:#00E5FF; margin-bottom:8px; letter-spacing:0.1em;">TILE COORDINATES</div>
+          <div style="border:1px dashed rgba(255,255,255,0.2); padding:10px; border-radius:6px; background:rgba(255,255,255,0.02); font-family:'Inter', sans-serif; font-size:14px; color:#FFFFFF; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center;">
+            <span>Tile_X14_Y28_N9</span>
+            <span style="font-size:12px; color:rgba(255,255,255,0.4);">▼</span>
+          </div>
+
+          <div style="font-family:'JetBrains Mono', monospace; font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:8px; letter-spacing:0.1em;">DOWNSTREAM VALIDATION</div>
+          <div style="display:flex; align-items:center; margin-bottom:10px;">
+            <input type="checkbox" checked disabled style="margin-right:10px;">
+            <span style="font-family:'Inter', sans-serif; font-size:14px; color:rgba(255,255,255,0.7);">Run YOLOv8 Detector</span>
+          </div>
+          <div style="display:flex; align-items:center;">
+            <input type="checkbox" checked disabled style="margin-right:10px;">
+            <span style="font-family:'Inter', sans-serif; font-size:14px; color:rgba(255,255,255,0.7);">Show Physics Bounding</span>
+          </div>
+        </div>
+
+        <div style="border-top:1px dashed rgba(255,255,255,0.1); padding-top:20px;">
+          <button style="width:100%; background:transparent; border:1px dashed #FFB300; color:#FFB300; padding:10px; border-radius:6px; font-family:'JetBrains Mono', monospace; font-size:13px; font-weight:bold; cursor:default;">
+            EXPORT RASTER
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Area: 4 side-by-side view panels & metrics strip below -->
+      <div style="flex:1; display:flex; flex-direction:column; box-sizing:border-box; padding:25px; justify-content:space-between;">
+        
+        <!-- 4 Panels Side-by-Side -->
+        <div style="display:grid; grid-template-columns: repeat(4, 1fr); grid-gap:15px; height:340px;">
+          
+          <!-- Panel 1: Raw IR -->
+          <div style="border:1px dashed rgba(255,255,255,0.15); border-radius:8px; background:rgba(0,0,0,0.3); padding:15px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.5); font-weight:bold;">RAW IR (BAND 10)</div>
+            <!-- Center placeholder graphic -->
+            <div style="width:100%; height:200px; border:1px dashed rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); font-family:'JetBrains Mono', monospace; font-size:13px; background:linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.03) 55%, transparent 55%); background-size:20px 20px;">
+              [ 100m TIR RASTER ]
+            </div>
+            <div style="font-family:'Inter', sans-serif; font-size:12px; color:rgba(255,255,255,0.4);">Resampled to 30m by USGS</div>
+          </div>
+
+          <!-- Panel 2: SR-Enhanced IR -->
+          <div style="border:1px dashed rgba(255,255,255,0.15); border-radius:8px; background:rgba(0,0,0,0.3); padding:15px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; font-weight:bold;">SR-ENHANCED IR</div>
+            <!-- Center placeholder graphic -->
+            <div style="width:100%; height:200px; border:1px dashed rgba(0,229,255,0.15); display:flex; align-items:center; justify-content:center; color:rgba(0,229,255,0.3); font-family:'JetBrains Mono', monospace; font-size:13px; background:linear-gradient(45deg, transparent 45%, rgba(0,229,255,0.03) 45%, rgba(0,229,255,0.03) 55%, transparent 55%); background-size:20px 20px;">
+              [ ESRGAN 4X SUPER-RES ]
+            </div>
+            <div style="font-family:'Inter', sans-serif; font-size:12px; color:rgba(0,229,255,0.5);">Reconstructed sharp details</div>
+          </div>
+
+          <!-- Panel 3: Colorized Output -->
+          <div style="border:1px dashed rgba(255,255,255,0.15); border-radius:8px; background:rgba(0,0,0,0.3); padding:15px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#FFB300; font-weight:bold;">COLORIZED OUTPUT</div>
+            <!-- Center placeholder graphic -->
+            <div style="width:100%; height:200px; border:1px dashed rgba(255,179,0,0.15); display:flex; align-items:center; justify-content:center; color:rgba(255,179,0,0.3); font-family:'JetBrains Mono', monospace; font-size:13px; background:linear-gradient(45deg, transparent 45%, rgba(255,179,0,0.03) 45%, rgba(255,179,0,0.03) 55%, transparent 55%); background-size:20px 20px;">
+              [ PIX2PIX GENERATED RGB ]
+            </div>
+            <div style="font-family:'Inter', sans-serif; font-size:12px; color:rgba(255,179,0,0.5);">Constrained physics prediction</div>
+          </div>
+
+          <!-- Panel 4: Real RGB Ground Truth -->
+          <div style="border:1px dashed rgba(255,255,255,0.15); border-radius:8px; background:rgba(0,0,0,0.3); padding:15px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:space-between; position:relative;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.5); font-weight:bold;">REAL RGB GROUND TRUTH</div>
+            <!-- Center placeholder graphic -->
+            <div style="width:100%; height:200px; border:1px dashed rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.2); font-family:'JetBrains Mono', monospace; font-size:13px; background:linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.03) 45%, rgba(255,255,255,0.03) 55%, transparent 55%); background-size:20px 20px;">
+              [ CO-REGISTERED RGB BANDS ]
+            </div>
+            <div style="font-family:'Inter', sans-serif; font-size:12px; color:rgba(255,255,255,0.4);">Landsat 9 true-color target</div>
+          </div>
+
+        </div>
+
+        <!-- Metrics Strip Below -->
+        <div style="height:90px; background:rgba(255,255,255,0.02); border:1px dashed rgba(255,255,255,0.1); border-radius:8px; display:flex; align-items:center; justify-content:space-around; box-sizing:border-box; padding:15px;">
+          <div style="text-align:center;">
+            <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:rgba(255,255,255,0.4); display:block; margin-bottom:4px;">PSNR (PEAK SNR)</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:20px; font-weight:bold; color:#00E5FF;">31.42 dB</span>
+          </div>
+          <div style="height:40px; width:1px; background:rgba(255,255,255,0.1);"></div>
+          <div style="text-align:center;">
+            <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:rgba(255,255,255,0.4); display:block; margin-bottom:4px;">SSIM (STRUCTURAL)</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:20px; font-weight:bold; color:#00E5FF;">0.896</span>
+          </div>
+          <div style="height:40px; width:1px; background:rgba(255,255,255,0.1);"></div>
+          <div style="text-align:center;">
+            <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:rgba(255,255,255,0.4); display:block; margin-bottom:4px;">LPIPS (PERCEPTUAL)</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:20px; font-weight:bold; color:#FFB300;">0.142</span>
+          </div>
+          <div style="height:40px; width:1px; background:rgba(255,255,255,0.1);"></div>
+          <div style="text-align:center;">
+            <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:rgba(255,255,255,0.4); display:block; margin-bottom:4px;">PHYSICS RECONSTRUCTION</span>
+            <span style="font-family:'JetBrains Mono', monospace; font-size:20px; font-weight:bold; color:#00E5FF; text-transform:uppercase;">98.2% PASS</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bottom Captions & Notes (Fills the lower 25% empty band) -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:840px; width:1720px; height:110px; z-index:10; background:rgba(255, 255, 255, 0.02); border:1px solid rgba(255, 255, 255, 0.05); border-radius:8px; padding:20px 25px; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between;">
+    <div style="font-family:'Inter', sans-serif; font-size:18px; color:rgba(255,255,255,0.7); line-height:1.4; width:1200px;">
+      <strong style="color:#00E5FF;">Design Philosophy:</strong> Deliberately minimal by design — frontend investment is secondary to model and evaluation rigor, which is what this problem statement is actually graded on.
+    </div>
+    <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); text-align:right;">
+      METRICS STREAMED REAL-TIME VIA FLASK BACKEND
+    </div>
+  </div>
+
+  <!-- Bottom slide indicator -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:1010px; width:1720px; height:24px; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.15em; color:rgba(255,255,255,0.3); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span>06 / 09</span>
+  </div>
+
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

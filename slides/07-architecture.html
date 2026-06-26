@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>07 · Architecture — ISRO Hackathon 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0; overflow: hidden; background: #070B19; color: #FFFFFF;
+    font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
+  }
+  .slide-container {
+    background: #070B19;
+  }
+  .tech-box {
+    background: #070B19;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .tech-header {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+  .tech-title {
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+  .tech-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 3px;
+  }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="07 Architecture" style="position:relative; width:1920px; height:1080px; overflow:hidden;">
+
+  <!-- Decorative: Subtle space-grid background -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:1080px; background-image: linear-gradient(to right, rgba(0, 229, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 229, 255, 0.02) 1px, transparent 1px); background-size: 80px 80px; z-index: 1;"></div>
+
+  <!-- Header metadata -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:60px; width:1720px; height:30px; font-family:'JetBrains Mono', monospace; font-size:14px; letter-spacing:0.2em; color:rgba(255,255,255,0.5); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span style="color:#00E5FF; font-weight:500;">MODEL SYSTEM ARCHITECTURE</span>
+  </div>
+
+  <!-- Horizontal divider -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:100px; width:1720px; height:1px; background:linear-gradient(90deg, rgba(0,229,255,0.5) 0%, rgba(255,179,0,0.3) 50%, rgba(255,255,255,0.05) 100%); z-index: 5;"></div>
+
+  <!-- Slide Title -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:130px; width:1720px; height:60px; z-index:10;">
+    <h1 style="font-family:'Inter', sans-serif; font-weight:700; font-size:40px; margin:0; color:#FFFFFF; letter-spacing:-0.01em;">
+      Model System Architecture
+    </h1>
+  </div>
+
+  <!-- Dense Technical Block Diagram (The complete architecture visual) -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:210px; width:1720px; height:600px; background:#0F152D; border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:30px; box-sizing:border-box; box-shadow:0 15px 35px rgba(0,0,0,0.3); z-index:10;">
+    
+    <!-- Stage 1: Data Ingestion & Recovery (Left Column Group) -->
+    <div style="position:absolute; left:30px; top:30px; width:340px; height:540px; border:1px dashed rgba(255,255,255,0.1); border-radius:8px; padding:20px; box-sizing:border-box;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; margin-bottom:20px; font-weight:bold;">1. INGESTION &amp; RECOVERY</div>
+      
+      <!-- Box 1.1 -->
+      <div class="tech-box" style="width:100%; height:85px; margin-bottom:20px;">
+        <div class="tech-header">Input Source</div>
+        <div class="tech-title">Landsat 9 Data</div>
+        <div class="tech-sub">Bands: B2, B3, B4, B10</div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align:center; color:rgba(255,255,255,0.3); font-size:16px; margin:-10px 0 10px 0;">▼</div>
+
+      <!-- Box 1.2 -->
+      <div class="tech-box" style="width:100%; height:85px; margin-bottom:20px;">
+        <div class="tech-header">Pre-Processing</div>
+        <div class="tech-title">Co-registration</div>
+        <div class="tech-sub">RGB Composite (30m)</div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align:center; color:rgba(255,255,255,0.3); font-size:16px; margin:-10px 0 10px 0;">▼</div>
+
+      <!-- Box 1.3 -->
+      <div class="tech-box" style="width:100%; height:110px;">
+        <div class="tech-header">TIR Recovery</div>
+        <div class="tech-title">Native 100m Recovery</div>
+        <div class="tech-sub">Reconstructs native TIR from resampled USGS data. Degradation 100m➔200m (TRAINING ONLY)</div>
+      </div>
+    </div>
+
+    <!-- Arrow Stage 1 -> Stage 2 -->
+    <div style="position:absolute; left:380px; top:280px; font-size:24px; color:#00E5FF;">➔</div>
+
+    <!-- Stage 2: Super-Resolution (Middle-Left Column Group) -->
+    <div style="position:absolute; left:410px; top:30px; width:340px; height:540px; border:1px dashed rgba(255,255,255,0.1); border-radius:8px; padding:20px; box-sizing:border-box;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; margin-bottom:20px; font-weight:bold;">2. SUPER-RESOLUTION</div>
+
+      <!-- Box 2.1 -->
+      <div class="tech-box" style="width:100%; height:85px; margin-bottom:30px;">
+        <div class="tech-header">Input Tensor</div>
+        <div class="tech-title">Synthetic 200m TIR</div>
+        <div class="tech-sub">Downsampled for training</div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align:center; color:rgba(255,255,255,0.3); font-size:16px; margin:-15px 0 15px 0;">▼</div>
+
+      <!-- Box 2.2 -->
+      <div class="tech-box" style="width:100%; height:105px; border-color:rgba(0,229,255,0.3); background:rgba(0,229,255,0.02); margin-bottom:30px;">
+        <div class="tech-header" style="color:#00E5FF;">SR Engine</div>
+        <div class="tech-title" style="color:#00E5FF;">ESRGAN SR Module</div>
+        <div class="tech-sub">RRDB Blocks + PixelShuffle upscaling</div>
+      </div>
+
+      <!-- Arrow -->
+      <div style="text-align:center; color:rgba(255,255,255,0.3); font-size:16px; margin:-15px 0 15px 0;">▼</div>
+
+      <!-- Box 2.3 -->
+      <div class="tech-box" style="width:100%; height:85px;">
+        <div class="tech-header">Output Tensor</div>
+        <div class="tech-title">SR Output: 100m TIR</div>
+        <div class="tech-sub">Sharpened thermal bands</div>
+      </div>
+    </div>
+
+    <!-- Arrow Stage 2 -> Stage 3 -->
+    <div style="position:absolute; left:760px; top:280px; font-size:24px; color:#FFB300;">➔</div>
+
+    <!-- Stage 3: Fine-Tuning & Loss Gating (Middle-Right Column Group) -->
+    <div style="position:absolute; left:790px; top:30px; width:520px; height:540px; border:1px dashed rgba(255,255,255,0.1); border-radius:8px; padding:20px; box-sizing:border-box;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#FFB300; margin-bottom:15px; font-weight:bold;">3. CONDITIONAL INITIALIZATION &amp; FINE-TUNING</div>
+
+      <!-- Row with Conditional CycleGAN (Top Half) -->
+      <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+        <!-- CycleGAN pretrain block -->
+        <div class="tech-box" style="width:48%; height:130px; border-color:rgba(255,179,0,0.3); background:rgba(255,179,0,0.02);">
+          <div class="tech-header" style="color:#FFB300;">Pre-training (Conditional)</div>
+          <div class="tech-title">CycleGAN Module</div>
+          <div class="tech-sub">Init Pix2Pix Generator. Corpus: Unpaired IR/RGB datasets</div>
+        </div>
+        <!-- Pix2Pix fine-tune block -->
+        <div class="tech-box" style="width:48%; height:130px; border-color:rgba(0,229,255,0.3); background:rgba(0,229,255,0.02);">
+          <div class="tech-header" style="color:#00E5FF;">Supervised Training</div>
+          <div class="tech-title">Pix2Pix Fine-Tune</div>
+          <div class="tech-sub">Paired 100m TIR ➔ RGB composite fine-tuning</div>
+        </div>
+      </div>
+
+      <!-- Box 3.3: 7-Term Loss Block -->
+      <div class="tech-box" style="width:100%; height:140px; border-color:rgba(255,179,0,0.4); background:rgba(255,179,0,0.02); margin-bottom:20px;">
+        <div class="tech-header" style="color:#FFB300;">Objective Functions</div>
+        <div class="tech-title">7-Term Physical &amp; Structural Loss</div>
+        <div class="tech-sub">L1 + SSIM + Adversarial + LPIPS-Perceptual + NDVI Consistency + NDWI Consistency + SegFormer Semantic Constraint</div>
+      </div>
+
+      <!-- Box 3.4: SegFormer auxiliary channel -->
+      <div class="tech-box" style="width:100%; height:80px; border-color:rgba(255,255,255,0.15);">
+        <div class="tech-header">Auxiliary Channel</div>
+        <div class="tech-title">SegFormer Land-Cover Constraint</div>
+        <div class="tech-sub">Provides semantic class map to penalize illogical colors</div>
+      </div>
+
+      <!-- Box 3.5: Physics Verification Gate -->
+      <div class="tech-box" style="width:100%; height:75px; margin-top:20px; border-color:rgba(0,229,255,0.4); background:rgba(0,229,255,0.04);">
+        <div class="tech-header" style="color:#00E5FF;">Verification Gate</div>
+        <div class="tech-title" style="color:#00E5FF;">NDVI / NDWI Verification &amp; Correction Loop</div>
+      </div>
+    </div>
+
+    <!-- Arrow Stage 3 -> Stage 4 -->
+    <div style="position:absolute; left:1320px; top:280px; font-size:24px; color:#00E5FF;">➔</div>
+
+    <!-- Stage 4: Output & Evaluation (Right Column Group) -->
+    <div style="position:absolute; left:1350px; top:30px; width:340px; height:540px; border:1px dashed rgba(255,255,255,0.1); border-radius:8px; padding:20px; box-sizing:border-box;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; margin-bottom:20px; font-weight:bold;">4. DELIVERY &amp; EVAL</div>
+
+      <!-- Box 4.1 -->
+      <div class="tech-box" style="width:100%; height:85px; margin-bottom:25px;">
+        <div class="tech-header">Final Product</div>
+        <div class="tech-title">RGB GeoTIFF Output</div>
+        <div class="tech-sub">Final coordinates + RGB raster</div>
+      </div>
+
+      <!-- Split evaluation targets -->
+      <div class="tech-box" style="width:100%; height:85px; margin-bottom:20px;">
+        <div class="tech-header">Image Quality QA</div>
+        <div class="tech-title">PSNR / SSIM / FID / LPIPS</div>
+      </div>
+
+      <div class="tech-box" style="width:100%; height:85px; margin-bottom:20px;">
+        <div class="tech-header">Downstream Validation</div>
+        <div class="tech-title">YOLOv8 Detection mAP</div>
+      </div>
+
+      <div class="tech-box" style="width:100%; height:85px;">
+        <div class="tech-header">Classical Baselines</div>
+        <div class="tech-title">Bicubic &amp; Classical Color</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Honesty Side-Note Box (Fills lower 25% empty band) -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:830px; width:1720px; height:120px; z-index:10; background:rgba(255, 179, 0, 0.05); border:1px solid rgba(255, 179, 0, 0.25); border-radius:8px; padding:20px 30px; box-sizing:border-box; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:28px; color:#FFB300; margin-right:20px;">⚠</div>
+      <p style="font-family:'Inter', sans-serif; font-size:18px; color:rgba(255,255,255,0.7); margin:0; line-height:1.4;">
+        <strong style="color:#FFB300;">Gating Principle:</strong> CycleGAN stage is conditional — included only if a real, named unpaired dataset is confirmed; otherwise this path is cut, not faked.
+      </p>
+    </div>
+    <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:rgba(255,255,255,0.4); text-align:right;">
+      SYSTEM INTEGRITY CHECK VERIFIED
+    </div>
+  </div>
+
+  <!-- Bottom slide indicator -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:1010px; width:1720px; height:24px; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.15em; color:rgba(255,255,255,0.3); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span>07 / 09</span>
+  </div>
+
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

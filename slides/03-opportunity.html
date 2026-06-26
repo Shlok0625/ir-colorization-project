@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>03 · The Opportunity — ISRO Hackathon 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  html, body {
+    margin: 0; padding: 0; overflow: hidden; background: #070B19; color: #FFFFFF;
+    font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased;
+  }
+  .slide-container {
+    background: #070B19;
+  }
+</style>
+</head>
+<body>
+<div class="slide-container" data-screen-label="03 Opportunity" style="position:relative; width:1920px; height:1080px; overflow:hidden;">
+
+  <!-- Decorative: Subtle space-grid background -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:0; top:0; width:1920px; height:1080px; background-image: linear-gradient(to right, rgba(0, 229, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 229, 255, 0.02) 1px, transparent 1px); background-size: 80px 80px; z-index: 1;"></div>
+
+  <!-- Header metadata -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:60px; width:1720px; height:30px; font-family:'JetBrains Mono', monospace; font-size:14px; letter-spacing:0.2em; color:rgba(255,255,255,0.5); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span style="color:#00E5FF; font-weight:500;">CORE DIFFERENTIATORS (USP)</span>
+  </div>
+
+  <!-- Horizontal divider -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:100px; width:1720px; height:1px; background:linear-gradient(90deg, rgba(0,229,255,0.5) 0%, rgba(255,179,0,0.3) 50%, rgba(255,255,255,0.05) 100%); z-index: 5;"></div>
+
+  <!-- Title Section -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:140px; width:1720px; height:80px; z-index:10;">
+    <h1 style="font-family:'Inter', sans-serif; font-weight:700; font-size:40px; margin:0; color:#FFFFFF; letter-spacing:-0.01em;">
+      The Opportunity &amp; Core USP
+    </h1>
+    <p style="font-family:'Inter', sans-serif; font-size:18px; color:rgba(255,255,255,0.5); margin-top:8px; margin-bottom:0;">
+      Three defensible technical pillars that elevate this project from visual plausibility to scientific credibility.
+    </p>
+  </div>
+
+  <!-- Comparison Graphic Area (Left Side) -->
+  <div data-object="true" data-object-type="shape" style="position:absolute; left:100px; top:250px; width:640px; height:540px; background:#0F152D; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:35px; box-sizing:border-box; box-shadow:0 15px 35px rgba(0,0,0,0.25); z-index:10;">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:14px; color:#FFB300; letter-spacing:0.15em; margin-bottom:20px; text-transform:uppercase;">MODEL METHODOLOGY CONTRAST</div>
+    
+    <!-- Row 1: Typical -->
+    <div style="margin-top:25px; border-bottom:1px solid rgba(255,255,255,0.05); padding-bottom:25px;">
+      <div style="font-family:'Inter', sans-serif; font-weight:600; font-size:18px; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:0.05em; display:flex; align-items:center;">
+        <span style="width:8px; height:8px; background:#FF4F5B; border-radius:50%; display:inline-block; margin-right:10px;"></span>
+        Typical IR Colorization
+      </div>
+      <div style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.5); margin-top:8px; line-height:1.4;">
+        No real-time ground truth; relies purely on visual plausibility. Standard GAN/L1 losses hallucinate feature colors, violating physics metrics. Single-metric evaluation lacks downstream validity.
+      </div>
+    </div>
+
+    <!-- Row 2: Ours -->
+    <div style="margin-top:25px;">
+      <div style="font-family:'Inter', sans-serif; font-weight:600; font-size:20px; color:#00E5FF; text-transform:uppercase; letter-spacing:0.05em; display:flex; align-items:center;">
+        <span style="width:8px; height:8px; background:#00E5FF; border-radius:50%; display:inline-block; margin-right:10px;"></span>
+        Our Scientific Framework
+      </div>
+      <div style="font-family:'Inter', sans-serif; font-size:16px; color:rgba(255,255,255,0.8); margin-top:8px; line-height:1.4;">
+        Supervised against Landsat 9 co-registered RGB ground truth. Constrained by a 7-term physical and semantic loss. Multi-metric evaluation and downstream object detection verification.
+      </div>
+    </div>
+  </div>
+
+  <!-- USP Column Details (Right Side) -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:780px; top:250px; width:1040px; height:540px; z-index:10; overflow:hidden;">
+    
+    <!-- Pillar 1 -->
+    <div style="margin-bottom:20px; background:#0A1024; border-left:4px solid #00E5FF; padding:15px 20px; border-radius:0 12px 12px 0;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; letter-spacing:0.1em; font-weight:bold;">01 · REAL PAIRED GROUND TRUTH</div>
+      <h3 style="font-family:'Inter', sans-serif; font-weight:600; font-size:20px; color:#FFFFFF; margin:6px 0 4px 0;">No Assumed Colorization: Real Landsat 9 Co-registration</h3>
+      <p style="font-family:'Inter', sans-serif; font-size:15px; color:rgba(255,255,255,0.6); margin:0; line-height:1.4;">
+        Most IR-colorization research has no real color ground truth to supervise against — it relies on plausibility, not accuracy. This project uses Landsat 9's genuinely co-registered Band 10 (thermal) and Bands 2/3/4 (true RGB) from the same overpass, same scene — so predicted color is supervised directly against real measured color, pixel-by-pixel. This removes the central ambiguity that limits most colorization work.
+      </p>
+    </div>
+
+    <!-- Pillar 2 -->
+    <div style="margin-bottom:20px; background:#0A1024; border-left:4px solid #00E5FF; padding:15px 20px; border-radius:0 12px 12px 0;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#00E5FF; letter-spacing:0.1em; font-weight:bold;">02 · PHYSICS-CONSTRAINED LOSS</div>
+      <h3 style="font-family:'Inter', sans-serif; font-weight:600; font-size:20px; color:#FFFFFF; margin:6px 0 4px 0;">7-Term Loss Formulation (Including NDVI &amp; NDWI Consistency)</h3>
+      <p style="font-family:'Inter', sans-serif; font-size:15px; color:rgba(255,255,255,0.6); margin:0; line-height:1.4;">
+        Physics-constrained, not just visually plausible. A 7-term loss function (reconstruction + structural + adversarial + perceptual + NDVI consistency + NDWI consistency + independent semantic-segmentation consistency) is explicitly weighted to prevent the generator from producing color that merely "looks real" while contradicting the underlying physical signal — directly targeting the hallucination risk that generic GAN-colorization approaches don't address.
+      </p>
+    </div>
+
+    <!-- Pillar 3 -->
+    <div style="margin-bottom:0px; background:#0A1024; border-left:4px solid #FFB300; padding:15px 20px; border-radius:0 12px 12px 0;">
+      <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#FFB300; letter-spacing:0.1em; font-weight:bold;">03 · RIGOROUS ENGINEERING HONESTY</div>
+      <h3 style="font-family:'Inter', sans-serif; font-weight:600; font-size:20px; color:#FFFFFF; margin:6px 0 4px 0;">No Technical Buzzword Satiation: Available Data Gates</h3>
+      <p style="font-family:'Inter', sans-serif; font-size:15px; color:rgba(255,255,255,0.6); margin:0; line-height:1.4;">
+        Engineering honesty as a design principle. Every architectural choice (e.g., whether unpaired pretraining is even used) is gated behind a named, real, available dataset requirement and validated through an explicit ablation study — not included for technical buzzword density. This is a system designed to survive scrutiny, including its own.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Dramatic Closing Line (Fills lower empty area) -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:830px; width:1720px; height:120px; z-index:10; background:rgba(0, 229, 255, 0.05); border:1px solid rgba(0, 229, 255, 0.2); border-radius:8px; padding:25px 35px; box-sizing:border-box; display:flex; align-items:center;">
+    <div style="font-family:'JetBrains Mono', monospace; font-size:32px; color:#00E5FF; margin-right:30px;">“</div>
+    <p style="font-family:'Inter', sans-serif; font-weight:500; font-size:22px; color:#FFFFFF; margin:0; line-height:1.4; letter-spacing:-0.01em;">
+      We are not claiming to remove hallucination — we are claiming to measure, bound, and report it, with a real physical ground truth to check against.
+    </p>
+  </div>
+
+  <!-- Bottom slide indicator -->
+  <div data-object="true" data-object-type="textbox" style="position:absolute; left:100px; top:1010px; width:1720px; height:24px; font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.15em; color:rgba(255,255,255,0.3); z-index:10; display:flex; justify-content:space-between; align-items:center;">
+    <span>ISRO BHARATIYA ANTARIKSH HACKATHON 2026</span>
+    <span>03 / 09</span>
+  </div>
+
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
