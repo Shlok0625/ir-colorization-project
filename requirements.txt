@@ -1,0 +1,12 @@
+# --- CORE (install these first, always needed) ---
+numpy
+opencv-python-headless
+scikit-image
+matplotlib
+
+# --- OPTIONAL / HEAVY (only needed for FID + detection mAP + GPU latency) ---
+# Install these once the modeling team gives you real outputs to benchmark.
+# torch
+# torchvision
+# torchmetrics
+# clean-fid

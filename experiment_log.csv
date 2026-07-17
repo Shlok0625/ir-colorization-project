@@ -1,0 +1,2 @@
+timestamp,model_version,n_test_images,avg_psnr,avg_ssim,fid_score,fid_warning,avg_spectral_consistency,n_flagged_hallucination,mean_latency_ms,ms_per_megapixel,notes
+2026-07-09T23:53:56,unlabeled,8,24.131,0.8973,N/A,,-0.422,0,9.79,37.36,[SYNTHETIC DATA -- not a real result] 
